@@ -1,21 +1,21 @@
 # Flax OS
 
-Flax OS is a Debian-based operating system engineered for users who demand advanced security and privacy without sacrificing usability. It combines multiple proven cybersecurity paradigms into a single, cohesive platform while remaining suitable for everyday, general-purpose computing.
+Flax OS is a complete independent operating system engineered for users who demand advanced security and privacy without sacrificing usability and stability. It combines multiple proven cybersecurity paradigms into a single, cohesive platform while remaining suitable for everyday, general-purpose computing.
 
 By integrating isolation, anonymity, system hardening, and secure-by-default configurations, Flax OS aims to make strong security accessible to both professionals and privacy-conscious users.
 
 ## Key Features
 
-### Debian-Based Stability
-Built on Debian to ensure reliability, long-term support, and access to a mature software ecosystem.
+### Stability
+Built to ensure reliability and stability, long-term support while giving rapid fixed releases, and access to a mature software ecosystem.
 
 ### Security-First Design
 Flax OS integrates concepts and technologies inspired by:
 
-- **Qubes OS** — compartmentalization and workload isolation.
-- **Tails** — live OS and non-persistent privacy workflows.
-- **Whonix** — Tor-based network isolation via a dedicated gateway. 
-- **Kodachi** — curated security and anonymity tools.
+- Qubes OS — compartmentalization and workload isolation.
+- Tails — live OS and non-persistent privacy workflows.
+- Whonix — Tor-based network isolation via a dedicated gateway. 
+- Kodachi — curated security and anonymity tools.
 
 ### Privacy-Focused by Default
 Designed to minimize data leakage through hardened defaults, secure networking, and strong encryption.
@@ -33,7 +33,6 @@ Flax OS follows a defense-in-depth security model, layering multiple protections
 ### System Hardening
 - Hardened kernel configuration and secure system defaults.
 - Strict permission models and reduced attack surface.
-- Timely security updates inherited from Debian.
 
 
 ### Isolation & Compartmentalization
@@ -53,10 +52,11 @@ Flax OS follows a defense-in-depth security model, layering multiple protections
 - Reduced forensic footprint through ephemeral system states.
 
 ### Security & Privacy Tooling
+- Flax OS includes a centralized security center similar to Qubes OS manger and YaST, Flax Center allows users to manage security-related components such as containers, virtual machines, firewall rules, Tor routing, metadata cleaning, system monitoring, anti-virus and so on.
 - Pre-installed and curated security tools inspired by Kodachi.
 - Encryption utilities for data at rest and in transit.
 - Monitoring and auditing tools to enhance situational awareness.
-- Pentesting tools within system by default.
+- Pentesting tools within system by default, not all but basic ones yes, if you want a full bundle write install the following: "sudo superpkg install flax-pentest".
 
 ### Cryptography & Data Protection
 - Full-disk encryption and encrypted user data by default.
@@ -68,9 +68,23 @@ Flax OS follows a defense-in-depth security model, layering multiple protections
 - Balanced automation to prevent misconfiguration.
 - Security features designed to be understandable and controllable.
 
+### Multi-Kernel architecture
+- BSD which is going to be in use is "FlaxBSD", my own fork of some BSD OS.
+- This subsystem may be used for specialized networking and isolation function.
+- BSD running in VM/Container while sharing communication layer.
+- Kernel module for communication layer and BSD kernel control.
+- Multi-Kernel can be used as a microkernel.
+- Microkernel can be used for networking stack, which is used as a Whonix-style gateway model.
+
+### superpkg / xpkg
+- superpkg is the command-line package manager, and xpkg is a file extension to install superpkg packages through files like on MacOS or Windows.
+- Binary package manager.
+- Choice or rolling or stable, as for single package or multiple packages.
+- Rollback support.
+
 ## Project Goals
 
-- Deliver a secure-by-default Linux operating system.
+- Deliver a secure-by-default hybrid of Linux and Unix operating system.
 - Balance security, privacy, and usability.
 - Make advanced cybersecurity concepts accessible to a wider audience.
 - Provide a reliable platform for secure computing and everyday use.
@@ -81,6 +95,8 @@ Flax OS follows a defense-in-depth security model, layering multiple protections
 - Security researchers and students.
 - Developers and system administrators.
 - Users seeking a hardened Linux desktop for daily use.
+- Gnome loyal users.
+- Linux and Unix users.
 
 ## Project Status
 
@@ -95,3 +111,8 @@ Please open issues or submit pull requests to help improve Flax OS.
 
 Flax OS follows the licensing terms of its included components.
 Refer to individual packages and files for specific license information.
+
+
+#Flax Linux
+
+Debian tasting like Flax OS flavor, early development.
