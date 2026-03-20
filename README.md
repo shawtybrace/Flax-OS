@@ -113,6 +113,6 @@ Flax OS follows the licensing terms of its included components.
 Refer to individual packages and files for specific license information.
 
 
-#Flax Linux
+# Flax Linux
 
 Debian tasting like Flax OS flavor, early development.
